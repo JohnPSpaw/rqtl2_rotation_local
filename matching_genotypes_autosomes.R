@@ -17,6 +17,7 @@ for(i in 1:8) {
   }
 }
 
+#computes expected 
 expected_geno <- function(founder1, founder2)
   {
     result <- founder1
@@ -30,7 +31,6 @@ expected_geno <- function(founder1, founder2)
   }
 
 matching_genos <- function(ind, chr, markers) {
-  
   #convert index of individual to individual name
   #ind is index with respect to absdiff
   ind_name <- ind_names[ind] #name of ind... such as "DO-101"... primary key between absdiff and attieDO
@@ -79,7 +79,8 @@ explore_genos <- function(chr,ind,markers) {
     }
   }
   colnames(matching) <- geno_names
-  print(head(matching))
+  #print(head(matching))
+  print(matching[1:20,])
   
   print("Plotting")
   directory <- "Plots/explore_matches/"

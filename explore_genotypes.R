@@ -6,7 +6,7 @@ ind_names <- (dimnames(absdiff[[1]])[1])[[1]]
 ind_index <- seq(1,dim(absdiff[[1]])[1])
 
 
-
+#Chr 3
 explore_markers <- c(6000,6403)
 explore_ind <- seq(1,483)
 explore_chr <- 3
@@ -20,7 +20,7 @@ explore_genos(explore_chr,explore_ind,explore_markers)
 
 
 
-
+#Chr 8
 explore_markers <- c(4100,4600)
 explore_ind <- seq(1,483)
 explore_chr <- 8
@@ -34,7 +34,7 @@ explore_genos(explore_chr,explore_ind,explore_markers)
 
 
 
-
+#Chr 16
 explore_markers <- c(200,1200)
 explore_ind <- seq(1,483)
 explore_chr <- 16
@@ -50,7 +50,7 @@ explore_genos(explore_chr,explore_ind,explore_markers)
 
 
 
-
+#Chr X
 explore_markers <- c(200,1000) #compare to 200-800
 explore_ind <- seq(1,242)
 explore_chr <- 20
