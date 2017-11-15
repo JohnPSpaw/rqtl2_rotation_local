@@ -12,8 +12,8 @@ for(i in 1:20) {
   filename <- paste0("Plots/heatmap_abs_diff/viridis/abs_heatmap_chr_",i,".png")
   png(filename)
   plot_main <- paste0("Chromosome ",i)
-  heatmap(t(matrix),Colv=NA, Rowv=NA, col = viridis(256), zlim=c(0,2),
-          xlab = "Individual", ylab= "Marker",main=plot_main,
+  image(t(matrix), col = viridis(256), zlim=c(0,2),
+          xlab = "Marker", ylab= "Individual",main=plot_main, scale=NULL,
           labRow = NA, labCol = NA)
   dev.off()
 }

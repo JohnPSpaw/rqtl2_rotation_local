@@ -7,7 +7,7 @@ ind_index <- seq(1,dim(absdiff[[1]])[1])
 #generate column names
 lcount <- 1
 geno_names <- rep(NA,36)
-letters <- c("A","B","C","D","E","F","G","H")
+
 for(i in 1:8) {
   for(j in 1:8) {
     if(i <= j) {

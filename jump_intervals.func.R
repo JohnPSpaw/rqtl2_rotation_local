@@ -45,9 +45,9 @@ jump_intervals <- function(chr,ind,threshold) {
   }
 }
 
-for(k in 100:150) {
+for(k in 60:41) {
   writeLines(paste0("\n","Ind ",k))
-  jump_intervals(chr=8,ind=k,threshold=1.95)
+  jump_intervals(chr=10,ind=k,threshold=1.75)
 }
 
 
