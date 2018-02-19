@@ -15,10 +15,8 @@ for(i in 1:20) {
   png_name_ind <- paste0("Plots/agg_ind/agg_ind_",i,".png")
   
   png(png_name_ind)
-  
-  hist(agg, main = main_title, breaks=30, 
-       xlab="Mean across markers", ylab = "Frequency (individuals)", ylim=c(0,80), xlim=c(0,2))
-
+    hist(agg, main = main_title, breaks=30, 
+         xlab="Mean across markers", ylab = "Frequency (individuals)", ylim=c(0,80), xlim=c(0,2))
   dev.off()
 }
 

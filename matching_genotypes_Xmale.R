@@ -12,8 +12,9 @@ markers <- colnames(g)[1:1000]
 is_female <- attieDO$is_female
 females <- which(is_female)
 males <- which(!is_female)
-
 ################################################################
+
+#Give matching proportions of each genotype between specified marker interval
 matching_genos <- function(ind, chr, markers) {
   g <-attieDO$geno[[chr]] 
   fg <-attieDO$founder_geno[[chr]]
@@ -29,9 +30,8 @@ matching_genos <- function(ind, chr, markers) {
   gg[gg==0] <- NA
   fgg[fgg==0] <- NA
   
-  #print(apply(fgg, 1, function(a) mean(a == gg, na.rm=TRUE)))
+  print(apply(fgg, 1, function(a) mean(a == gg, na.rm=TRUE)))
 }
-
 
 #Manually examine genotype proportions at specified markers for specified individuals
 inds <- c(58,75)
