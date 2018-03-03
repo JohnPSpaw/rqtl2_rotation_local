@@ -1,3 +1,5 @@
+#Histograms of mean abs diff across markes for each chromosome
+
 ##################################################
 #Load data
 absdiff <- readRDS("Data/absdiff.rds")

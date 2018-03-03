@@ -1,3 +1,7 @@
+##Collection of functions for comparing proportions of matching genotypes
+##between individual and each founder and a particular individual
+
+
 #Load data
 absdiff <- readRDS("Data/absdiff.rds")
 attieDO <- readRDS("Data/base/attieDO_cross.rds")
@@ -7,7 +11,6 @@ ind_index <- seq(1,dim(absdiff[[1]])[1])
 #generate column names
 lcount <- 1
 geno_names <- rep(NA,36)
-
 for(i in 1:8) {
   for(j in 1:8) {
     if(i <= j) {
@@ -17,7 +20,7 @@ for(i in 1:8) {
   }
 }
 
-#computes expected 
+#computes expected genotype at a marker given two specified founders
 expected_geno <- function(founder1, founder2)
   {
     result <- founder1
@@ -30,6 +33,7 @@ expected_geno <- function(founder1, founder2)
     result
   }
 
+#Output proportion of matchs between individual and each founder combination along a marker region
 matching_genos <- function(ind, chr, markers) {
   #convert index of individual to individual name
   #ind is index with respect to absdiff

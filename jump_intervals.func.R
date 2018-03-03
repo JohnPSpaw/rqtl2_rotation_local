@@ -1,3 +1,11 @@
+#Function
+#Inputs: 
+#   chromosome number (excluding X) 
+#   individual index 
+#   threshold to identify jumps (0 < x < 2)
+#Output: 
+#   list of mutually exclusive endpoint pairs: markers between left_endpoiint and right_endpoint have abs diff above threshold
+
 jump_intervals <- function(chr,ind,threshold) {
   #matrix for chromosome
   matrix <- absdiff[[chr]];

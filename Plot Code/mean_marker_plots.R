@@ -1,3 +1,5 @@
+#Plot mean abs diff prob (over individuals) across all markers
+
 ##################################################
 #Load data
 absdiff <- readRDS("Data/absdiff.rds")

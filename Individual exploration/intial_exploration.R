@@ -1,9 +1,13 @@
 #Exploring chr=16, ind=10, markers=(577,870)
+
 #Load data
 absdiff <- readRDS("Data/absdiff.rds"); attieDO <- readRDS("Data/base/attieDO_cross.rds")
 ind_names <- (dimnames(absdiff[[1]])[1])[[1]]; ind_index <- seq(1,dim(absdiff[[1]])[1])
 
-ind <-10; chr <- 16; markers <- c(577, 870)
+#set specific individual
+ind <-10; 
+chr <- 16; 
+markers <- c(577, 870)
 
 #convert index of individual to individual name
 #ind is index with respect to absdiff
@@ -26,7 +30,6 @@ for(i in 1:8) {
   proportion_match[i] <- mean(gg == fgg[i,], na.rm=TRUE) 
 }
 
-#RQTL2 Predictions
 
 
 

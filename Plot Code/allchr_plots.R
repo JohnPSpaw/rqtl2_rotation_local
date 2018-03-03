@@ -1,3 +1,5 @@
+#Create plots to visualize variation of abs diff probs across chromosomes and individuals
+
 ##################################################
 #Load data
 absdiff <- readRDS("Data/absdiff.rds")
